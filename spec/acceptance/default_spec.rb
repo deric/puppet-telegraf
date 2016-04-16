@@ -43,17 +43,16 @@ describe 'telegraf' do
       end
 
       describe file ('/etc/telegraf/telegraf.conf') do
-          it { should be_file }
-          it { should contain '[agent]' }
-          it { should contain '  hostname = "test.vagrant.dev"' }
-          it { should contain '[[outputs.influxdb]]' }
-          it { should contain '  urls = ["http://localhost:8086"]' }
-          it { should contain '  database = "telegraf"' }
-          it { should contain '  username = "telegraf"' }
-          it { should contain '  password = "metricsmetricsmetrics"' }
-          it { should contain '[[inputs.cpu]]' }
-          it { should contain '  percpu = true' }
-          it { should contain '  totalcpu = true' }
+        it { should be_file }
+        it { should contain '[agent]' }
+        it { should contain '[[outputs.influxdb]]' }
+        it { should contain '  urls = ["http://localhost:8086"]' }
+        it { should contain '  database = "telegraf"' }
+        it { should contain '  username = "telegraf"' }
+        it { should contain '  password = "metricsmetricsmetrics"' }
+        it { should contain '[[inputs.cpu]]' }
+        it { should contain '  percpu = true' }
+        it { should contain '  totalcpu = true' }
       end
 
   end
