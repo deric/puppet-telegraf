@@ -13,5 +13,6 @@ rvm:
 env:
   - BEAKER_set="debian-8-x86_64_docker"
   - BEAKER_set="centos-7-x86_64_docker"
+  - BEAKER_set="default"
   - PUPPET_VERSION="~> 3.8.0" STRICT_VARIABLES=yes
   - PUPPET_VERSION="~> 4.0" STRICT_VARIABLES=yes
